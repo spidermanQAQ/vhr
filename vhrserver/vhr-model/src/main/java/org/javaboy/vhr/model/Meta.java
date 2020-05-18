@@ -1,6 +1,8 @@
 package org.javaboy.vhr.model;
 
-public class Meta {
+import java.io.Serializable;
+
+public class Meta implements Serializable {
     private Boolean requireAuth;
 
     private Boolean keepAlive;

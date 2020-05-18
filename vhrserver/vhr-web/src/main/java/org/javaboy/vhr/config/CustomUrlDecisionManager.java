@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Collection;
 
-//判断当前用户具备MyFilter分析出来的角色
+//第二部，判断当前用户是否具备CustomFilterInvocationSecurityMetadataSource分析出来的角色
 @Component
 public class CustomUrlDecisionManager implements AccessDecisionManager {
     @Override
@@ -22,7 +22,7 @@ public class CustomUrlDecisionManager implements AccessDecisionManager {
         for (ConfigAttribute configAttribute : collection) {
             String needRole=configAttribute.getAttribute();
             if ("ROLE_LOGIN".equals(needRole)){
-                //如果当前用户是AnonymousAuthenticationToken（匿名实例）
+                //如果当前用户是AnonymousAuthenticationToken（匿名实例），也就是没登陆
                 if (authentication instanceof AnonymousAuthenticationToken){
                     throw new AccessDeniedException("尚未登陆，请登录!");
                 }else {

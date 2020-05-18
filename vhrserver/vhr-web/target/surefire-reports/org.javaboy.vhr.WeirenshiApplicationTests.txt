@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.javaboy.vhr.WeirenshiApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.833 s - in org.javaboy.vhr.WeirenshiApplicationTests
