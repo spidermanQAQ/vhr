@@ -51,6 +51,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
+    //告诉springsecurity userdetail已经准备好了，你可以拿去用了
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(hrService);
@@ -79,6 +80,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         return o;
                     }
                 })
+                //and 方法表示结束当前标签，上下文回到HttpSecurity，开启新一轮的配置
                 .and()
                 .formLogin()
                 .usernameParameter("username")
@@ -90,7 +92,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 //登录成功的处理器
                 .successHandler(new AuthenticationSuccessHandler() {
                     @Override
-                    //authentication保存着登陆成功的用户信息
+                    //authentication保存着登陆成功的用户信息，是在登录请求时就记录下了，在hrservice认证用户名，密码后进行填充权限信息
                     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
                         //响应的内容类型以及编码方式
                         response.setContentType("application/json;charset=utf-8");

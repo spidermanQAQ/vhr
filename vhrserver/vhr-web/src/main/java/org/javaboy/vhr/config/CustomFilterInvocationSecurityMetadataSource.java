@@ -14,7 +14,9 @@ import org.springframework.util.AntPathMatcher;
 import java.util.Collection;
 import java.util.List;
 
-//根据用户传来的请求地址，分析请求需要的角色
+//后端接口权限设计
+//根据用户传来的请求地址，分析请求需要的角色，这是第一步
+//第二步分析
 @Component
 public class CustomFilterInvocationSecurityMetadataSource implements FilterInvocationSecurityMetadataSource {
     @Autowired
@@ -28,7 +30,9 @@ public class CustomFilterInvocationSecurityMetadataSource implements FilterInvoc
         String requestUrl=((FilterInvocation) o).getRequestUrl();
         List<Menu>menus= menuService.getAllMenusWithRole();
         for (Menu menu : menus) {
+            //进行匹配，模式为menu里的url，匹配url
             if (antPathMatcher.match(menu.getUrl(),requestUrl)){
+                //当前请求所需的角色
                 List<Role>roles=menu.getRoles();
                 String[]str=new String[roles.size()];
                 for (int i=0;i<roles.size();i++){
