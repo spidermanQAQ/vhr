@@ -25,4 +25,6 @@ public interface HrMapper {
 
 
     List<Hr>getAllHrs(@Param("hrid")Integer hrid ,@Param("keywords") String keywords);
+
+    List<Hr> getAllHrsExcludeCurrentHr(Integer id);
 }
