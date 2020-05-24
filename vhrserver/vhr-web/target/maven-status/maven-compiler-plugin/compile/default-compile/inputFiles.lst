@@ -4,6 +4,7 @@ F:\idea projects\vhr\vhrserver\vhr-web\src\main\java\org\javaboy\vhr\controller\
 F:\idea projects\vhr\vhrserver\vhr-web\src\main\java\org\javaboy\vhr\controller\salary\salarySobConfigController.java
 F:\idea projects\vhr\vhrserver\vhr-web\src\main\java\org\javaboy\vhr\controller\config\SystemConfigController.java
 F:\idea projects\vhr\vhrserver\vhr-web\src\main\java\org\javaboy\vhr\config\CustomFilterInvocationSecurityMetadataSource.java
+F:\idea projects\vhr\vhrserver\vhr-web\src\main\java\org\javaboy\vhr\controller\ChatController.java
 F:\idea projects\vhr\vhrserver\vhr-web\src\main\java\org\javaboy\vhr\controller\salary\salaryController.java
 F:\idea projects\vhr\vhrserver\vhr-web\src\main\java\org\javaboy\vhr\controller\system\basic\JobLevelController.java
 F:\idea projects\vhr\vhrserver\vhr-web\src\main\java\org\javaboy\vhr\controller\system\basic\DepartmentController.java
@@ -14,6 +15,7 @@ F:\idea projects\vhr\vhrserver\vhr-web\src\main\java\org\javaboy\vhr\config\Secu
 F:\idea projects\vhr\vhrserver\vhr-web\src\main\java\org\javaboy\vhr\config\LoginFilter.java
 F:\idea projects\vhr\vhrserver\vhr-web\src\main\java\org\javaboy\vhr\VhrApplication.java
 F:\idea projects\vhr\vhrserver\vhr-web\src\main\java\org\javaboy\vhr\config\Swagger2.java
+F:\idea projects\vhr\vhrserver\vhr-web\src\main\java\org\javaboy\vhr\controller\system\HrInfoController.java
 F:\idea projects\vhr\vhrserver\vhr-web\src\main\java\org\javaboy\vhr\config\WebLogAspect.java
 F:\idea projects\vhr\vhrserver\vhr-web\src\main\java\org\javaboy\vhr\controller\system\basic\PermissController.java
 F:\idea projects\vhr\vhrserver\vhr-web\src\main\java\org\javaboy\vhr\exception\GlobalExceptionHandler.java

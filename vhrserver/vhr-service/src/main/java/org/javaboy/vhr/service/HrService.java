@@ -54,4 +54,8 @@ public class HrService implements UserDetailsService {
     public Integer deleteHr(Integer id) {
         return hrMapper.deleteByPrimaryKey(id);
     }
+
+    public List<Hr> getAllHrsExcludeCurrentHr() {
+        return hrMapper.getAllHrsExcludeCurrentHr(HrUtils.getCurrentHr().getId());
+    }
 }

@@ -25,6 +25,9 @@
     id, name, phone, telephone, address, enabled, username, password, userface, remark
   </sql>
 
+  <select id="getAllHrsExcludeCurrentHr" resultMap="BaseResultMap">
+    select *from hr where id!=#{id}
+  </select>
   <select id="getAllHrs" resultMap="HrWithRoles">
     <!--操作员搜索,if标签的 test 属性中写的是对象的属性名,CONCAT(字符串连接函数)，将's%',#{keywords},'%'连接起来
     使用左连接-->

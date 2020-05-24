@@ -21,13 +21,19 @@ import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.Date;
 
+
 @Component
 @Aspect
 @Slf4j
 public class WebLogAspect {
 
+    @Pointcut("execution(public * org.javaboy.vhr.controller.WsController.*(..))")
+    public void excludeWebSocket(){
+
+    }
+
     //..代表当前包和子包，如果用。代表该包下，而controller里还有其他包，所以只在登陆是记录了，其他没记录
-    @Pointcut("execution(public * org.javaboy.vhr.controller..*.*(..))")
+    @Pointcut("execution(public * org.javaboy.vhr.controller..*.*(..))&&!excludeWebSocket()")
     public void WebLog(){
     }
 
@@ -63,3 +69,4 @@ public class WebLogAspect {
         return proceed;
     }
 }
+
